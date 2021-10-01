@@ -9,10 +9,11 @@ int main()
 	double r;
 
 	cout << "x = "; cin >> x;
-	cout << "r = "; cin >> r;
 	cout << "y = "; cin >> y;
+	cout << "r = "; cin >> r;
 
-	if ((y >= x && y <= sqrt(r*r - pow((x+r),2)) + r) || ((y <= x && y >= sqrt(r * r - pow((x - r), 2) - r)))) {
+
+	if ((y >= x && pow(y + r, 2) <= r*r -pow(x+r,2)) || ((y <= x && pow(y - r, 2) <= r * r - pow(x - r, 2)))) {
 		cout << "yes";
 	}
 	else {
